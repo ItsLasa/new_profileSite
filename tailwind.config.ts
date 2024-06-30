@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily:{
 
        'manrope':[ "Manrope"," sans-serif"],
+       'cormorant': ["Cormorant", "serif"],
 
       },
       backgroundImage: {
