@@ -2,6 +2,7 @@ import type { Config } from "tailwindcss";
 
 
 
+
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +12,16 @@ const config: Config = {
   
   theme: {
     extend: {
+      animation: {
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
+      },
+      keyframes: {
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
+      },
       fontFamily:{
 
        'manrope':[ "Manrope"," sans-serif"],
