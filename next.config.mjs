@@ -9,6 +9,11 @@ const nextConfig = {
         },
         {
           hostname: 'pbs.twimg.com',
+         
+        },
+        {
+          hostname: 'img.icons8.com',
+          
         }
       
       ]
