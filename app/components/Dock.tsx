@@ -1,23 +1,58 @@
 import { Dock, DockIcon } from "@/app/components/magicui/dock";
+import Image from "next/image";
 import React from "react";
+import { FaTwitter } from "react-icons/fa";
+import { FaLinkedinIn, FaMedium, FaStackOverflow } from "react-icons/fa6";
+import { BorderBeam } from "./magicui/border-beam";
+import Link from "next/link";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 export default function DockDemo() {
   return (
-    <div className="relative mt-20 flex h-[180px] w-full max-w-[22rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-background md:shadow-xl">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Dock
-      </span>
+    <div className="relative mt-0 bg-gradient-to-br from-zinc-50 to-gray-50 flex h-[180px] w-full max-w-[30rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-background md:shadow-xl">
+      <div className="flex justify-center items-center gap-4">
+        <span className="pointer-events-none  whitespace-pre-wrap font-manrope lg:text-2xl dark:from-white dark:to-slate-900/10">
+          My Socials Networks
+        </span>
+        <Image src={"/earth.gif"} alt={"earth"} width={40} height={40} />
+      </div>
+
       <Dock>
         <DockIcon>
-          <Icons.gitHub className="h-6 w-6" />
+          <Link href="https://www.linkedin.com/in/manoj-illangasinghe/" passHref>
+            <FaLinkedinIn className="h-6 w-6 text-blue-700" />
+          </Link>
         </DockIcon>
+
         <DockIcon>
-          <Icons.whatsapp className="h-6 w-6" />
+          <Link href="https://github.com/ItsLasa" passHref>
+            <Icons.gitHub className="h-6 w-6" />
+          </Link>
         </DockIcon>
+
         <DockIcon>
-          <Icons.codepen className="h-6 w-6" />
+          <Link href="https://codepen.io/itslasa" passHref>
+            <Icons.codepen className="h-6 w-6" />
+          </Link>
+        </DockIcon>
+
+        <DockIcon>
+          <Link href="https://twitter.com/ItxLasa" passHref>
+            <FaTwitter className="h-6 w-6 text-blue-500" />
+          </Link>
+        </DockIcon>
+
+        <DockIcon>
+          <Link href="https://stackoverflow.com/users/20635236/manoj-illangasinghe" passHref>
+            <FaStackOverflow className="h-6 w-6 text-orange-600" />
+          </Link>
+        </DockIcon>
+
+        <DockIcon>
+          <Link href="https://medium.com/@manojlasantha306" passHref>
+            <FaMedium className="h-6 w-6" />
+          </Link>
         </DockIcon>
       </Dock>
     </div>
@@ -25,7 +60,6 @@ export default function DockDemo() {
 }
 
 const Icons = {
-
   codepen: (props: IconProps) => (
     <svg viewBox="0 0 512 512" {...props}>
       <path
@@ -34,7 +68,7 @@ const Icons = {
       ></path>
     </svg>
   ),
-  
+
   gitHub: (props: IconProps) => (
     <svg viewBox="0 0 438.549 438.549" {...props}>
       <path
@@ -43,9 +77,20 @@ const Icons = {
       ></path>
     </svg>
   ),
- 
+  stackOverflow: (props: IconProps) => (
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 291" {...props}>
+      <path
+        fill="#BCBBBB"
+        d="M30.167 196.667H0v94.5h189v-94.5h-30.167v64.333h-128.666v-64.333z"
+      />
+      <path
+        fill="#F48024"
+        d="M55.017 195.983l118.333 23.333-5.833 29.167-118.333-23.333 5.833-29.167zm33.833-62.667l105.5 54.333-13.167 25.5-105.5-54.333 13.167-25.5zm67.667-73.167l84.333 76-20.167 22.5-84.333-76 20.167-22.5zm63.333-57.667l45.167 91.333-27 14-45.167-91.333 27-14zm-137.667 266v-30.167h128.667v30.167h-128.667z"
+      />
+      <path fill="#BCBBBB" d="M104.5 231.833h94.833v-30.167h-94.833z" />
+    </svg>
+  ),
 
- 
   whatsapp: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
