@@ -6,7 +6,12 @@ const nextConfig = {
          
           hostname: 'sdk.bitmoji.com',
          
-        }]
+        },
+        {
+          hostname: 'pbs.twimg.com',
+        }
+      
+      ]
       },
 };
 
