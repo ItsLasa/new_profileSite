@@ -1,4 +1,7 @@
+// pages/index.tsx
 'use client'
+import WelcomeAnimation from '../components/WelcomeAnimation';
+
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import Twitter from "./Twitter";
@@ -10,11 +13,12 @@ import Particles from "./magicui/particles";
 import Nav from "./Nav";
 import { BorderBeam } from "./magicui/border-beam";
 import GoToTopButton from "./GoToTopButton";
+import AnimatedListDemo from "./AnimatedList";
+import CardNew from "./CardNew";
 
-function Home() {
- 
-  
-    const { theme } = useTheme();
+const Home: React.FC = () => {
+  const [showAnimation, setShowAnimation] = useState(true);
+  const { theme } = useTheme();
     const [color, setColor] = useState("#ffffff");
    
     useEffect(() => {
@@ -22,7 +26,11 @@ function Home() {
     }, [theme]);
 
   return (
-    <main>
+    <>
+      {showAnimation && <WelcomeAnimation onComplete={() => setShowAnimation(false)} />}
+      {!showAnimation && (
+        <div className="container mx-auto">
+          <main>
       {/* <NavBar /> */}
       <Nav/>
       <div className="   lg:flex gap-2 py-12 px-4 ">
@@ -66,8 +74,15 @@ function Home() {
       </div>
      
 
-      <div className="flex justify-start gap-8 items-center">
-        <Twitter />
+      <div className="flex  gap-2 mr-auto items-center">
+        {/* <Twitter /> */}
+
+        <AnimatedListDemo/>
+        <div className="flex flex-col gap-2 mr-auto items-center">
+        <CardNew/>
+        <CardNew/>
+        </div>
+        
         
       </div>
 
@@ -75,7 +90,10 @@ function Home() {
 
       
     </main>
+        </div>
+      )}
+    </>
   );
-}
+};
 
 export default Home;
