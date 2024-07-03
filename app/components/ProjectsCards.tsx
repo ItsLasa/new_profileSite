@@ -10,7 +10,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="border rounded-lg shadow-lg p-8">
+    <div className="border rounded-lg shadow-lg p-8 hover:border-2 hover:border-violet-400 transition-all duration-300">
       <Image
         src={project.image}
         alt={project.title}
