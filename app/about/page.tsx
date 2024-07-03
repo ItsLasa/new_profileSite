@@ -11,7 +11,7 @@ function Page() {
     <main>
       <Nav />
 
-      <div className="py-10">
+      <div className="py-10 mt-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,32 +26,16 @@ function Page() {
           >
             <div className="flex flex-col gap-4 font-manrope justify-start px-10 py-20">
               <div className="flex justify-between items-center mb-8 gap-2">
-                <p className="text-xs md:text-xl lg:text-2xl">
-                  Freelancer Designer Based in Sri Lanka
+                <p className="text-xs md:text-xl lg:text-4xl underline underline-offset-4 decoration-dashed">
+                  About Me
                 </p>
               </div>
-              <h1 className="text-xl tracking-tighter lg:text-4xl font-light text-gray-500 md:text-2xl font-franunce text-justify">
-                Hey there, I’m{" "}
-                <span className="text-black text-xl lg:text-4xl md:text-2xl">
-                  Manoj
-                </span>{" "}
-                <span className="animate-pulse"> 👋 </span> Welcome to my{" "}
-                <span className="underline decoration-dotted">
-                  digital garden
-                </span>{" "}
-                🌱 I like building things, learning new things, and taking on new challenges.
-                <br />
-                <br /> In my free time, I enjoy listening to{" "}
-                <span className="text-black cursor-pointer transition-all duration-300 hover:underline decoration-wavy decoration-violet-500">
-                  music
-                </span>
-                , watching{" "}
-                <span className="text-black cursor-pointer underline-offset-4 transition-all duration-300 hover:underline decoration-dashed decoration-blue-500">
-                  movies, blogs
-                </span>
-                , and playing cricket.
-                <br />
-                <br />
+              <h1 className="text-xl  tracking-normal lg:text-2xl font-light text-gray-500 md:text-2xl font-franunce text-justify">
+              I expanded my skills into programming languages like HTML,CSS,JavaScript,Java,Python,C++, and C#. To deepen my understanding,and I follow information technolgy dgree course from univercity of jaffna. <br />
+              <br />
+              I further developed my expertise through certifications and courses from industry leaders like  IBM, and Google, alongside resources like FreeCodeCamp. I have extensively studied JavaScript and React documentation. And i love to read documentations. <br />
+              Currently, I'm passionate about GoLang and fascinated by the advancements in artificial intelligence and its potential for positive impact. I have a strong desire and aptitude for continuous learning. 
+
               </h1>
             </div>
           </motion.div>
@@ -66,6 +50,15 @@ function Page() {
             <HoverCard />
           </motion.div>
         </motion.div>
+       <div className="end  px-10">
+        <div className="flex-col flex px-10 py-8 mt-8 justify-center items-center gap-4 border bg-gray-100 rounded-lg">
+          <div className="text-center text-xl lg:text-4xl ">Get in Touch</div>
+          <h1 className="text-justify">
+          I'm eager to join a collaborative team where I can contribute my skills and learn from others. If you have an exciting project, let's discuss how I can be a valuable asset. I'm actively seeking a new opportunity to apply my skills and continue growing!
+          </h1>
+          <button className="border shadow-lg bg-black text-white px-4 py-1 rounded-xl hover:bg-white hover:text-black transition-all duration-300">Say Hello</button>
+        </div>
+        </div>
       </div>
     </main>
   );
