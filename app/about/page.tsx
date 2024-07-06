@@ -1,12 +1,21 @@
 'use client'
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Nav from "../components/Nav";
-import CoolClickMe from "../components/CoolClickMe";
-import CardNew from "../components/CardNew";
-import HoverCard from "../components/HoverCard";
+import Nav from "@/app/components/Nav";
+import CoolClickMe from "@/app/components/CoolClickMe";
+import CardNew from "@/app/components/CardNew";
+import HoverCard from "@/app/components/HoverCard";
+import GoToTopButton from "@/app/components/GoToTopButton";
+import { useTheme } from "next-themes";
 
 function Page() {
+  const { theme } = useTheme();
+  const [color, setColor] = useState("#ffffff");
+ 
+  useEffect(() => {
+    setColor(theme === "dark" ? "#ffffff" : "#000000");
+  }, [theme]);
+
   return (
     <main>
       <Nav />
@@ -51,15 +60,18 @@ function Page() {
           </motion.div>
         </motion.div>
        <div className="end  px-10">
-        <div className="flex-col flex px-10 py-8 mt-8 justify-center items-center gap-4 border bg-gray-100 rounded-lg">
+        <div className="flex-col font-manrope flex px-10 py-8 mt-8 justify-center items-center gap-4 border bg-gradient-to-bl from-pink-50 to-blue-100 rounded-lg">
           <div className="text-center text-xl lg:text-4xl ">Get in Touch</div>
-          <h1 className="text-justify">
-          I'm eager to join a collaborative team where I can contribute my skills and learn from others. If you have an exciting project, let's discuss how I can be a valuable asset. I'm actively seeking a new opportunity to apply my skills and continue growing!
+          <h1 className="text-justify text-gray-500 text-sm lg:text-xl">
+          I'm eager to join a collaborative team where I can contribute my skills and learn from others. If you have an exciting project, lets discuss how I can be a valuable asset. I'm actively seeking a new opportunity to apply my skills and continue growing!
           </h1>
-          <button className="border shadow-lg bg-black text-white px-4 py-1 rounded-xl hover:bg-white hover:text-black transition-all duration-300">Say Hello</button>
+          <button className="border text-sm lg:text-xl shadow-lg bg-black text-white px-4 py-1 rounded-xl hover:bg-white hover:text-black hover:scale-110 hover:rounded-md hover:border-b transition-all duration-300">Say Hello</button>
         </div>
         </div>
+      
       </div>
+      <GoToTopButton/>
+
     </main>
   );
 }
