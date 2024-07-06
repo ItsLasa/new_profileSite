@@ -1,20 +1,22 @@
 'use client'
 import React from 'react';
+import { motion } from 'framer-motion';
+import HomePage from './components/Home';
 
-import HomePage from './components/Home'
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+};
 
 export default function Home() {
-
-
-
-
-  // const profile="https://sdk.bitmoji.com/me/sticker/jNLqpQKAbxdAnocFxJCTWyATyVeig0bGqzyNqTVZDdek92ETEx1toQ/10212044.png?p=dD1wO3Y9cG9wdWxhcjtsPWVu.v1&size=thumbnail"
   return (
-    <main className="px-8 py-8 scroll-smooth">
-
-      <HomePage/>
-
-   
-   </main>
+    <motion.main
+      className="px-8 py-8 scroll-smooth"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <HomePage />
+    </motion.main>
   );
 }
