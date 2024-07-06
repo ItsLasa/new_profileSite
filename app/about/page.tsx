@@ -7,6 +7,7 @@ import CardNew from "@/app/components/CardNew";
 import HoverCard from "@/app/components/HoverCard";
 import GoToTopButton from "@/app/components/GoToTopButton";
 import { useTheme } from "next-themes";
+import { TabsDemo } from "../components/Tabs";
 
 function Page() {
   const { theme } = useTheme();
@@ -68,6 +69,7 @@ function Page() {
           <button className="border text-sm lg:text-xl shadow-lg bg-black text-white px-4 py-1 rounded-xl hover:bg-white hover:text-black hover:scale-110 hover:rounded-md hover:border-b transition-all duration-300">Say Hello</button>
         </div>
         </div>
+        <TabsDemo/>
       
       </div>
       <GoToTopButton/>
