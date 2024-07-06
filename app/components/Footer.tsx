@@ -13,7 +13,7 @@ function Footer() {
             <div className="mail">
                 Manojlasantha306@Gmail.com
             </div>
-            <div className='flex justify-center items-center gap-4'>
+            <div className='flex justify-center font-manrope items-center gap-4'>
                 <Link href={''}><FaGithub className=' transition-all duration-300 scale-110' /></Link>
                 <Link href={''}><FaLinkedin  className=' transition-all duration-300 scale-110'/></Link>
                 <Link href={''}><FaInstagram  className=' transition-all duration-300 scale-110'/></Link>
