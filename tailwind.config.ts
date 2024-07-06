@@ -27,6 +27,7 @@ const config: Config = {
        'manrope':[ "Manrope"," sans-serif"],
        'cormorant': ["Cormorant", "serif"],
        'franunce': ["Fraunces", "serif"],
+       'garamond': ["EB Garamond", "serif"],
 
       },
       backgroundImage: {
