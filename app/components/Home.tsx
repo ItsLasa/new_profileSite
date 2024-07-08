@@ -76,10 +76,9 @@ function Home() {
         {/* <Twitter /> */}
 
         <AnimatedListDemo/>
-        <div className="flex flex-col gap-2 mr-auto items-center">
-        <CardNew/>
-        <CardNew/>
-        </div>
+        {/* <div className="flex flex-col gap-2 mr-auto items-center">
+       
+        </div> */}
         
         
       </div>
