@@ -1,9 +1,10 @@
 'use client'
 import React from "react";
 import { motion } from "framer-motion";
-import NavBar from "../components/NavBar";
+import Nav from "../components/Nav";
 import ProjectCard from "../components/ProjectsCards";
 import projects from "../data/projects";
+import Footer from "../components/Footer";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,7 +29,7 @@ const textVariants = {
 function Page() {
   return (
     <main>
-      <NavBar />
+      <Nav />
 
       <div className="main flex-col justify-start items-center gap-4 py-16 px-10">
         <motion.div
@@ -66,6 +67,7 @@ function Page() {
           </div>
         </motion.div>
       </div>
+      <Footer/>
     </main>
   );
 }
