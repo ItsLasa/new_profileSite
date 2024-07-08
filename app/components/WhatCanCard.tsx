@@ -2,7 +2,7 @@ import React from 'react'
 
 function WhatCanCard() {
   return (
-    <div className=' bg-gradient-to-r mb-6 from-slate-50 to-stone-100 border shadow-lg rounded-md font-manrope w-full h-auto p-8'>
+    <div className=' bg-gradient-to-r mb-6 py-12 pt-12 from-slate-50 to-stone-100 border shadow-lg rounded-md font-manrope w-full h-auto p-8'>
         <div className=' text-2xl lg:text-5xl font-semibold font-manrope'>What I can do for you</div> <br />
         <div className=' flex justify-center items-center
         gap-5 '>
