@@ -114,7 +114,7 @@ export const FadeInDiv = ({
           animate={{
             y: isActive(tab) ? [0, 40, 0] : 0,
           }}
-          className={cn("w-full h-full bg-slate-200 absolute px-6 top-0 left-0", className)}
+          className={cn("w-full h-full  absolute px-6 top-0 left-0", className)}
         >
           {tab.content}
         </motion.div>
