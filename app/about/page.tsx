@@ -41,7 +41,7 @@ function Page() {
                   About Me
                 </p>
               </div>
-              <h1 className="text-xl tracking-normal lg:text-2xl font-light text-gray-500 md:text-2xl font-garamond ">
+              <h1 className="text-xl tracking-normal text-justify lg:text-2xl font-light text-gray-500 md:text-2xl font-manrope ">
                 I expanded my skills into programming languages like  HTML,CSS,
                JavaScript,Java,Python,C++, and C#. To deepen my understanding 
                and I follow information technolgy dgree course
