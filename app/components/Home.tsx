@@ -1,7 +1,4 @@
-// pages/index.tsx
 'use client'
-import WelcomeAnimation from '../components/WelcomeAnimation';
-
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import Twitter from "./Twitter";
@@ -15,10 +12,13 @@ import { BorderBeam } from "./magicui/border-beam";
 import GoToTopButton from "./GoToTopButton";
 import AnimatedListDemo from "./AnimatedList";
 import CardNew from "./CardNew";
+import Footer from "./Footer";
+import WhatCanCard from "./WhatCanCard";
 
-const Home: React.FC = () => {
-  const [showAnimation, setShowAnimation] = useState(true);
-  const { theme } = useTheme();
+function Home() {
+ 
+  
+    const { theme } = useTheme();
     const [color, setColor] = useState("#ffffff");
    
     useEffect(() => {
@@ -26,11 +26,7 @@ const Home: React.FC = () => {
     }, [theme]);
 
   return (
-    <>
-      {showAnimation && <WelcomeAnimation onComplete={() => setShowAnimation(false)} />}
-      {!showAnimation && (
-        <div className="container mx-auto">
-          <main>
+    <main>
       {/* <NavBar /> */}
       <Nav/>
       <div className="   lg:flex gap-2 py-12 px-4 ">
@@ -72,6 +68,8 @@ const Home: React.FC = () => {
    
 
       </div>
+
+      <WhatCanCard/>
      
 
       <div className="flex  gap-2 mr-auto items-center">
@@ -86,14 +84,12 @@ const Home: React.FC = () => {
         
       </div>
 
-      <GoToTopButton/>
+     
 
-      
+      <Footer/>
+      <GoToTopButton/>
     </main>
-        </div>
-      )}
-    </>
   );
-};
+}
 
 export default Home;
