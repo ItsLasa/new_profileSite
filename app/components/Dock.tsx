@@ -12,7 +12,7 @@ export default function DockDemo() {
   return (
     <div className="relative mt-0  bg-gradient-to-br from-zinc-50 to-gray-50 flex h-[180px] w-full max-w-[30rem] flex-col items-center justify-center overflow-hidden rounded-2xl border bg-background md:shadow-xl">
       <div className="flex justify-center items-center gap-4">
-        <span className="pointer-events-none  whitespace-pre-wrap  font-cormorant lg:text-2xl dark:from-white dark:to-slate-900/10">
+        <span className="pointer-events-none   whitespace-pre-wrap font-manrope font-medium lg:text-2xl dark:from-white dark:to-slate-900/10">
           My Socials Networks
         </span>
         <Image src={"/earth.gif"} alt={"earth"} width={40} height={40} />
