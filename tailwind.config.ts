@@ -28,6 +28,7 @@ const config: Config = {
        'cormorant': ["Cormorant", "serif"],
        'franunce': ["Fraunces", "serif"],
        'garamond': ["EB Garamond", "serif"],
+       'poppins': ["Poppins", 'sans-serif'],
 
       },
       backgroundImage: {
