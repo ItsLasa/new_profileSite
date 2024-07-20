@@ -36,7 +36,7 @@ const slugs = [
 
 export default function IconCloudDemo() {
   return (
-    <div className="relative mt-4 bg-gradient-to-br from-zinc-50 to-gray-50 flex h-auto shadow-lg  w-full max-w-[28rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-16 pb-20 pt-8 ">
+    <div className="relative mt-4 bg-gradient-to-br from-zinc-50 to-lime-50 flex h-auto shadow-lg  w-full max-w-[28rem] items-center justify-center overflow-hidden rounded-lg border bg-background px-16 pb-20 pt-8 ">
       <IconCloud iconSlugs={slugs} />
       <BorderBeam size={250} duration={12} delay={9} />
     </div>
