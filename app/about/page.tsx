@@ -9,6 +9,8 @@ import GoToTopButton from "@/app/components/GoToTopButton";
 import { useTheme } from "next-themes";
 import { TabsDemo } from "../components/Tabs";
 import Footer from "../components/Footer";
+import Aboutme from "../components/aboutMe";
+
 
 function Page() {
   const { theme } = useTheme();
@@ -29,11 +31,13 @@ function Page() {
           transition={{ duration: 0.8 }}
           className="aboutContent px-14 lg:flex gap-10 justify-center"
         >
-          <motion.div
+
+          <Aboutme/>
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="shadow-lg border rounded-3xl lg:w-[760px] w-[440px] h-auto bg-gradient-to-bl from-zinc-50 to-lime-100"
+            className="shadow-lg border rounded-3xl lg:w-[1060px] w-[440px] h-auto bg-gradient-to-bl from-zinc-50 to-lime-100"
           >
             <div className="flex flex-col gap-4 font-manrope justify-start px-10 py-20">
               <div className="flex justify-between items-center mb-8 gap-2">
@@ -58,9 +62,9 @@ function Page() {
                 continuous learning.
               </h1>
             </div>
-          </motion.div>
+          </motion.div> */}
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -68,7 +72,8 @@ function Page() {
           >
             <CardNew />
             <HoverCard />
-          </motion.div>
+          </motion.div> */}
+         
         </motion.div>
 
         <TabsDemo />
